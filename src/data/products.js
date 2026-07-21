@@ -1,9 +1,9 @@
 /* ==========================================================================
-   LUMIÈRE LUXE — Curated 50+ Men's Luxury Masterpieces Dataset
+   LUMIÈRE LUXE — 75 Curated Luxury Men's Masterpieces Dataset
    ========================================================================== */
 
 export const LUXURY_PRODUCTS = [
-  // --- HAUTE HORLOGERIE (WATCHES - 15 Items) ---
+  // --- HAUTE HORLOGERIE (WATCHES - 20 Items) ---
   {
     id: "watch-01",
     name: "Nautilus 5711/1R-001 Rose Gold",
@@ -14,7 +14,7 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: true,
     tagline: "The Pinnacle of Swiss Horlogerie",
-    description: "Iconic octagonal bezel luxury timepiece in 18k Rose Gold with a warm brown gradated dial. Self-winding mechanical movement with Caliber 26-330 S C.",
+    description: "Iconic octagonal bezel luxury timepiece in 18k Rose Gold with a warm brown gradated dial.",
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop"],
     specs: { "Caliber": "26-330 S C", "Case": "18k Rose Gold", "Diameter": "40 mm", "Power Reserve": "45 Hours" }
@@ -29,7 +29,7 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: true,
     tagline: "High-Horlogerie Gem-Set Chronograph",
-    description: "Ultra-rare masterpiece adorned with 36 baguette-cut sapphires in rainbow graduation and diamond-paved lugs.",
+    description: "Ultra-rare masterpiece adorned with 36 baguette-cut sapphires in rainbow graduation.",
     image: "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1000&auto=format&fit=crop"],
     specs: { "Caliber": "Manufacture 4130", "Case": "18k Yellow Gold", "Bezel": "36 Rainbow Sapphires", "Diameter": "40 mm" }
@@ -47,7 +47,7 @@ export const LUXURY_PRODUCTS = [
     description: "Forged in frosted 18k white gold with a skeletonized dial revealing twin balance wheel assembly.",
     image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "Calibre 4104", "Case": "Frosted 18k White Gold", "Diameter": "41 mm", "Power Reserve": "45 Hours" }
+    specs: { "Caliber": "Calibre 4104", "Case": "Frosted 18k White Gold", "Diameter": "41 mm" }
   },
   {
     id: "watch-04",
@@ -59,10 +59,10 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: false,
     tagline: "The Archetype of the Luxury Diver's Watch",
-    description: "Features a royal blue dial with large luminescent hour markers and Cerachrom bezel in blue ceramic.",
+    description: "Features a royal blue dial with large luminescent hour markers and Cerachrom bezel.",
     image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "Rolex 3235", "Case": "18k Yellow Gold", "Water Resistance": "300 Meters", "Diameter": "41 mm" }
+    specs: { "Caliber": "Rolex 3235", "Case": "18k Yellow Gold", "Water Resistance": "300 Meters" }
   },
   {
     id: "watch-05",
@@ -74,10 +74,10 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: true,
     tagline: "The Astronomical Sky Chart Masterpiece",
-    description: "Features a nocturnal sky chart of the Northern Hemisphere, showing stars, orbit, and phase of the moon.",
+    description: "Features a nocturnal sky chart of the Northern Hemisphere, showing stars and orbit of the moon.",
     image: "https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "240 LU CL C", "Case": "Platinum 950", "Diameter": "44 mm", "Dial": "Sapphire Crystal Sky Chart" }
+    specs: { "Caliber": "240 LU CL C", "Case": "Platinum 950", "Diameter": "44 mm" }
   },
   {
     id: "watch-06",
@@ -89,10 +89,10 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: true,
     tagline: "Formula 1 Engineering for the Wrist",
-    description: "Crafted in Quartz TPT and Carbon TPT with skeletonized automatic winding movement and oversized date.",
+    description: "Crafted in Quartz TPT and Carbon TPT with skeletonized automatic winding movement.",
     image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "RMAC3", "Case": "Carbon TPT", "Power Reserve": "55 Hours", "Functions": "Flyback Chronograph" }
+    specs: { "Caliber": "RMAC3", "Case": "Carbon TPT", "Power Reserve": "55 Hours" }
   },
   {
     id: "watch-07",
@@ -103,15 +103,15 @@ export const LUXURY_PRODUCTS = [
     rating: 4.9,
     inStock: true,
     isFeatured: false,
-    tagline: "Haute Horlogerie for the High Traveler",
-    description: "18k 5N Pink Gold case with blue dial. Features a moon phase display and perpetual calendar requiring no adjustment until 2100.",
+    tagline: "Haute Horlogerie for High Travelers",
+    description: "18k 5N Pink Gold case with blue dial and perpetual calendar complication.",
     image: "https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "1120 QP/1", "Thickness": "8.1 mm", "Case": "18k Pink Gold", "Diameter": "41.5 mm" }
+    specs: { "Caliber": "1120 QP/1", "Case": "18k Pink Gold", "Diameter": "41.5 mm" }
   },
   {
     id: "watch-08",
-    name: "Lange 1 Time Zone Honeygold 716.050",
+    name: "Lange 1 Time Zone Honeygold",
     brand: "A. Lange & Söhne",
     category: "watches",
     price: 68000,
@@ -119,10 +119,10 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: false,
     tagline: "Saxon Watchmaking Artistry",
-    description: "Proprietary 18k Honeygold case with silver dial. Displays home time and second time zone with city ring indicator.",
+    description: "Proprietary 18k Honeygold case displaying home time and second time zone city ring.",
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "L141.1 Hand-wound", "Case": "18k Honeygold", "Power Reserve": "72 Hours", "Diameter": "41.9 mm" }
+    specs: { "Caliber": "L141.1 Hand-wound", "Case": "18k Honeygold", "Power Reserve": "72 Hours" }
   },
   {
     id: "watch-09",
@@ -134,10 +134,10 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: false,
     tagline: "NASA Apollo Mission Commemorative Piece",
-    description: "Silver dial with blue subdials and animated Snoopy in Command Module on the sapphire caseback.",
+    description: "Silver dial with blue subdials and animated Snoopy in Command Module on sapphire back.",
     image: "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "Co-Axial Master Chronometer 3861", "Case": "Stainless Steel", "Diameter": "42 mm" }
+    specs: { "Caliber": "Master Chronometer 3861", "Case": "Steel", "Diameter": "42 mm" }
   },
   {
     id: "watch-10",
@@ -149,14 +149,14 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: false,
     tagline: "Pioneer Aviation Elegance",
-    description: "Sculpted skeleton bridges forming Roman numerals with manual-winding 9619 MC movement.",
+    description: "Sculpted skeleton bridges forming Roman numerals with manual-winding movement.",
     image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "9619 MC", "Case": "18k Rose Gold", "Crown": "Beaded Crown Set with Sapphire" }
+    specs: { "Caliber": "9619 MC", "Case": "18k Rose Gold", "Crown": "Sapphire Cabochon" }
   },
   {
     id: "watch-11",
-    name: "Big Pilot's Watch Constant-Force Tourbillon",
+    name: "Big Pilot Constant-Force Tourbillon Armor Gold",
     brand: "IWC",
     category: "watches",
     price: 220000,
@@ -164,10 +164,10 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: false,
     tagline: "Engineering Precision for Aviators",
-    description: "Features a patented constant-force tourbillon mechanism and single-phase moon display for 577.5 years.",
+    description: "Features a patented constant-force tourbillon mechanism and single-phase moon display.",
     image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "94805 Hand-wound", "Case": "Armor Gold", "Power Reserve": "96 Hours", "Diameter": "46.2 mm" }
+    specs: { "Caliber": "94805", "Case": "Armor Gold", "Diameter": "46.2 mm" }
   },
   {
     id: "watch-12",
@@ -178,11 +178,11 @@ export const LUXURY_PRODUCTS = [
     rating: 4.7,
     inStock: true,
     isFeatured: false,
-    tagline: "The Art of Fusion in Translucent Crystal",
-    description: "Cut entirely from polished sapphire crystal block revealing the manufacture skeleton movement.",
+    tagline: "Translucent Crystal Fusion",
+    description: "Cut entirely from polished sapphire crystal block revealing manufacture skeleton movement.",
     image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "HUB1242", "Case": "Polished Sapphire Crystal", "Power Reserve": "72 Hours" }
+    specs: { "Caliber": "HUB1242", "Case": "Sapphire Crystal", "Power Reserve": "72 Hours" }
   },
   {
     id: "watch-13",
@@ -194,10 +194,10 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: true,
     tagline: "The Ultimate President's Watch",
-    description: "Features an olive green dial with Roman numeral markers and President bracelet in 18k Everose Gold.",
+    description: "Olive green dial with Roman numeral markers and President bracelet in 18k Everose Gold.",
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "Rolex 3255", "Case": "18k Everose Gold", "Bracelet": "President 3-Piece Link", "Diameter": "40 mm" }
+    specs: { "Caliber": "Rolex 3255", "Case": "18k Everose Gold", "Diameter": "40 mm" }
   },
   {
     id: "watch-14",
@@ -209,28 +209,103 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: false,
     tagline: "Contemporary Modern Sport Luxury",
-    description: "Midnight blue embossed dial with matching composite rubber strap and flyback chronograph complication.",
+    description: "Midnight blue embossed dial with matching composite rubber strap and flyback chronograph.",
     image: "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "CH 28-520 C", "Case": "18k White Gold", "Diameter": "42.2 mm", "Water Resistance": "120 Meters" }
+    specs: { "Caliber": "CH 28-520 C", "Case": "18k White Gold", "Diameter": "42.2 mm" }
   },
   {
     id: "watch-15",
-    name: "Monaco Calibre 11 Gulf Special Edition",
-    brand: "Tag Heuer",
+    name: "Reverso Tribute Tourbillon Duoface Rose Gold",
+    brand: "Jaeger-LeCoultre",
     category: "watches",
-    price: 9200,
-    rating: 4.7,
+    price: 128000,
+    rating: 5.0,
+    inStock: true,
+    isFeatured: true,
+    tagline: "Art Deco Reversible Masterpiece",
+    description: "Swivelling case showing sunray blue dial on front and skeletonized tourbillon on reverse.",
+    image: "https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Caliber": "JLC Calibre 847", "Case": "18k Pink Gold", "Mechanism": "Flying Tourbillon" }
+  },
+  {
+    id: "watch-16",
+    name: "Luminor Tourbillon GMT Titanium 47mm",
+    brand: "Panerai",
+    category: "watches",
+    price: 142000,
+    rating: 4.8,
     inStock: true,
     isFeatured: false,
-    tagline: "Iconic Square Case Racing Chronograph",
-    description: "Classic blue dial with legendary Gulf orange and light blue stripes and left-sided winding crown.",
+    tagline: "Florentine Naval Precision",
+    description: "DMLS 3D-printed titanium case with skeletonized movement and GMT indicator.",
     image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Caliber": "Calibre 11 Automatic", "Case": "Fine-brushed Steel", "Dimensions": "39 mm x 39 mm" }
+    specs: { "Caliber": "P.2005/T", "Case": "3D-Printed Titanium", "Power Reserve": "6 Days" }
+  },
+  {
+    id: "watch-17",
+    name: "Defy Extreme Double Tourbillon Carbon",
+    brand: "Zenith",
+    category: "watches",
+    price: 79000,
+    rating: 4.8,
+    inStock: true,
+    isFeatured: false,
+    tagline: "1/100th of a Second High Chronograph",
+    description: "Features two independent tourbillon escapements in a lightweight carbon fiber case.",
+    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Caliber": "El Primero 9020", "Case": "Carbon Fiber", "Frequency": "360,000 VpH" }
+  },
+  {
+    id: "watch-18",
+    name: "Classique Tourbillon Extra-Plat 5367 18k Rose Gold",
+    brand: "Breguet",
+    category: "watches",
+    price: 162000,
+    rating: 4.9,
+    inStock: true,
+    isFeatured: false,
+    tagline: "Inventor of the Tourbillon",
+    description: "Grand Feu enamel dial with off-centered tourbillon carriage and blued steel hands.",
+    image: "https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Caliber": "581 Ultra-thin", "Case": "18k Rose Gold", "Thickness": "7.45 mm" }
+  },
+  {
+    id: "watch-19",
+    name: "L-Evolution Tourbillon Carrousel Platinum",
+    brand: "Blancpain",
+    category: "watches",
+    price: 310000,
+    rating: 5.0,
+    inStock: true,
+    isFeatured: true,
+    tagline: "Dual Escapement Horlogical Wonder",
+    description: "Combines both a Tourbillon and a Carrousel in a single openworked platinum case.",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Caliber": "2322", "Case": "Platinum 950", "Power Reserve": "7 Days" }
+  },
+  {
+    id: "watch-20",
+    name: "Kintaro Hattori 160th Anniversary Spring Drive",
+    brand: "Grand Seiko",
+    category: "watches",
+    price: 38000,
+    rating: 4.9,
+    inStock: true,
+    isFeatured: false,
+    tagline: "Japanese Master Artisan Precision",
+    description: "Platinum 950 case with Zaratsu polishing and Spring Drive manual-winding Caliber 9R02.",
+    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Caliber": "Spring Drive 9R02", "Accuracy": "±1 sec per day", "Case": "Platinum 950" }
   },
 
-  // --- HAUTE COUTURE (MEN'S APPAREL - 13 Items) ---
+  // --- HAUTE COUTURE (SUITS & COATS - 20 Items) ---
   {
     id: "cloth-01",
     name: "O'Connor Peak-Lapel Silk Velvet Tuxedo",
@@ -240,11 +315,11 @@ export const LUXURY_PRODUCTS = [
     rating: 5.0,
     inStock: true,
     isFeatured: true,
-    tagline: "The Gold Standard in Gentleman Tailoring",
-    description: "Tailored in Italy from pure mulberry silk velvet with satin peak lapels and hand-finished buttonholes.",
+    tagline: "Gentleman Tailoring Standard",
+    description: "Tailored in Italy from pure mulberry silk velvet with satin peak lapels.",
     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "100% Silk Velvet & Satin", "Origin": "Milano, Italy", "Fit": "Custom Slim Tailored" }
+    specs: { "Material": "100% Silk Velvet & Satin", "Origin": "Milano, Italy" }
   },
   {
     id: "cloth-02",
@@ -256,10 +331,10 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: true,
     tagline: "Parisian Runway Haute Couture",
-    description: "Woven in Paris with gold metallic thread and hand-sewn crystal glass embellishments along lapels.",
+    description: "Woven in Paris with gold metallic thread and crystal glass embellishments along lapels.",
     image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Mulberry Silk & Metallic Gold Thread", "Origin": "Paris, France", "Care": "Specialist Dry Clean" }
+    specs: { "Material": "Mulberry Silk & Metallic Gold Thread", "Origin": "Paris, France" }
   },
   {
     id: "cloth-03",
@@ -274,7 +349,7 @@ export const LUXURY_PRODUCTS = [
     description: "Handcrafted in Rome using rare Vicuña, Qiviut, and Super 230s wool woven with 24k gold pinstripes.",
     image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Super 230s Wool, Vicuña & 24k Gold Thread", "Origin": "Rome, Italy", "Tailoring Hours": "60 Hours Handwork" }
+    specs: { "Material": "Super 230s Wool & 24k Gold Thread", "Origin": "Rome, Italy" }
   },
   {
     id: "cloth-04",
@@ -289,7 +364,7 @@ export const LUXURY_PRODUCTS = [
     description: "Sumptuous double-faced Mongolian cashmere stitched by hand with buffalo horn buttons.",
     image: "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "100% Mongolian Cashmere", "Origin": "Paris, France", "Lining": "100% Silk Jacquard" }
+    specs: { "Material": "100% Mongolian Cashmere", "Origin": "Paris, France" }
   },
   {
     id: "cloth-05",
@@ -304,7 +379,7 @@ export const LUXURY_PRODUCTS = [
     description: "Made in Italy from heavy black cashmere with velvet collar and cupro silk lining.",
     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Heavy Cashmere & Velvet Collar", "Origin": "Savile Row / Italy" }
+    specs: { "Material": "Heavy Cashmere & Velvet Collar", "Origin": "Italy" }
   },
   {
     id: "cloth-06",
@@ -346,10 +421,10 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: false,
     tagline: "Baroque Opulence & Royal Craftsmanship",
-    description: "Adorned with gold baroque thread embroidery along the lapel, cuffs, and pocket flaps.",
+    description: "Adorned with gold baroque thread embroidery along the lapel and cuffs.",
     image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Silk Jacquard & Gold Embroidery", "Origin": "Sicily, Italy" }
+    specs: { "Material": "Silk Jacquard & Gold Thread", "Origin": "Sicily, Italy" }
   },
   {
     id: "cloth-09",
@@ -376,7 +451,7 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: false,
     tagline: "Florentine Eccentric Luxury",
-    description: "Emerald velvet jacket with satin peak lapels and golden metallic bee motifs woven into lining.",
+    description: "Emerald velvet jacket with satin peak lapels and golden metallic bee motifs.",
     image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop"],
     specs: { "Material": "Italian Silk Velvet", "Origin": "Florence, Italy" }
@@ -394,25 +469,10 @@ export const LUXURY_PRODUCTS = [
     description: "Engineered with regenerated nylon gabardine and enamel triangle logo plaque.",
     image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Re-Nylon & Goose Down Insulation", "Origin": "Milan, Italy" }
+    specs: { "Material": "Re-Nylon & Down Insulation", "Origin": "Milan, Italy" }
   },
   {
     id: "cloth-12",
-    name: "Architectural Cutout Evening Tailcoat",
-    brand: "Givenchy",
-    category: "clothing",
-    price: 9800,
-    rating: 4.8,
-    inStock: true,
-    isFeatured: false,
-    tagline: "Modern High Fashion Tailoring",
-    description: "Structural black tailcoat with silver padlock closure and silk lapels.",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop",
-    gallery: ["https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Virgin Wool & Palladium Hardware", "Origin": "Paris, France" }
-  },
-  {
-    id: "cloth-13",
     name: "Vicuña Fur Collar Overcoat",
     brand: "Loro Piana",
     category: "clothing",
@@ -421,13 +481,133 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: true,
     tagline: "The Fibre of the Gods",
-    description: "Crafted from wild Andean Vicuña fleece, softer and rarer than cashmere, with chinchilla collar.",
+    description: "Crafted from wild Andean Vicuña fleece, softer and rarer than cashmere.",
     image: "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop"],
     specs: { "Material": "100% Wild Vicuña Fibre", "Origin": "Northern Italy" }
   },
+  {
+    id: "cloth-13",
+    name: "Triple-Stitched Super 200s Wool Suit",
+    brand: "Zegna",
+    category: "clothing",
+    price: 22000,
+    rating: 4.9,
+    inStock: true,
+    isFeatured: false,
+    tagline: "Sartorial Excellence from Trivero",
+    description: "Woven at Lanificio Zegna from 13.5 micron Australian merino wool.",
+    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Material": "13.5 Micron Super 200s Wool", "Origin": "Piedmont, Italy" }
+  },
+  {
+    id: "cloth-14",
+    name: "Embossed Leather Trench Coat",
+    brand: "Burberry",
+    category: "clothing",
+    price: 11000,
+    rating: 4.8,
+    inStock: true,
+    isFeatured: false,
+    tagline: "Heritage British Luxury Outerwear",
+    description: "Soft lambskin leather embossed with subtle check pattern and double-breasted belt.",
+    image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Material": "100% Lambskin Leather", "Origin": "London, UK" }
+  },
+  {
+    id: "cloth-15",
+    name: "Harness Detail Grain de Poudre Suit",
+    brand: "Alexander McQueen",
+    category: "clothing",
+    price: 8400,
+    rating: 4.8,
+    inStock: true,
+    isFeatured: false,
+    tagline: "Subversive British Tailoring",
+    description: "Tailored jacket integrated with a black leather harness detail across chest.",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Material": "Wool & Calfskin Harness", "Origin": "London, UK" }
+  },
+  {
+    id: "cloth-16",
+    name: "Medusa Head Gold Thread Jacquard Suit",
+    brand: "Versace",
+    category: "clothing",
+    price: 14200,
+    rating: 4.8,
+    inStock: true,
+    isFeatured: false,
+    tagline: "Milanese High Opulence",
+    description: "Black silk jacquard jacket featuring all-over gold tone Barocco weave pattern.",
+    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Material": "Silk & Gold Thread Jacquard", "Origin": "Milan, Italy" }
+  },
+  {
+    id: "cloth-17",
+    name: "FF Motif Mink Fur Collar Cashmere Coat",
+    brand: "Fendi",
+    category: "clothing",
+    price: 28000,
+    rating: 4.9,
+    inStock: true,
+    isFeatured: false,
+    tagline: "Roman Fur Atelier Heritage",
+    description: "Double-breasted black cashmere overcoat with detachable FF monogram mink collar.",
+    image: "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Material": "Cashmere & Mink Fur Collar", "Origin": "Rome, Italy" }
+  },
+  {
+    id: "cloth-18",
+    name: "Hand-Bespoke Charcoal Flannel Suit",
+    brand: "Canali",
+    category: "clothing",
+    price: 7800,
+    rating: 4.7,
+    inStock: true,
+    isFeatured: false,
+    tagline: "100% Made in Italy Since 1934",
+    description: "Soft Super 150s flannel wool suit with full floating canvas construction.",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Material": "Super 150s Flannel Wool", "Origin": "Brianza, Italy" }
+  },
+  {
+    id: "cloth-19",
+    name: "Diamond-Quilted Crocodile Leather Jacket",
+    brand: "Stefano Ricci",
+    category: "clothing",
+    price: 65000,
+    rating: 5.0,
+    inStock: true,
+    isFeatured: true,
+    tagline: "The Ultimate Symbol of Wealth",
+    description: "Matte crocodile leather bomber jacket with 18k gold zipper hardware and silk lining.",
+    image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Material": "Genuine Matte Crocodile Leather", "Origin": "Florence, Italy" }
+  },
+  {
+    id: "cloth-20",
+    name: "Super 200s Wool & Silk Evening Tuxedo",
+    brand: "Tom Ford",
+    category: "clothing",
+    price: 15800,
+    rating: 4.9,
+    inStock: true,
+    isFeatured: false,
+    tagline: "Modern Black Tie Masterpiece",
+    description: "Midnight navy wool and silk blend tuxedo with gross-grain silk lapels.",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Material": "Super 200s Wool & Mulberry Silk", "Origin": "Italy" }
+  },
 
-  // --- RARE LEATHER GOODS & FOOTWEAR (MEN'S LEATHER - 12 Items) ---
+  // --- RARE LEATHER GOODS & FOOTWEAR (LEATHER - 20 Items) ---
   {
     id: "leather-01",
     name: "Birkin 40 Haut à Courroies Crocodile Porosus",
@@ -437,8 +617,8 @@ export const LUXURY_PRODUCTS = [
     rating: 5.0,
     inStock: true,
     isFeatured: true,
-    tagline: "The Ultimate Holy Grail in Men's Leather",
-    description: "Shiny Vert Émeraude Porosus Crocodile leather with 18k gold-plated hardware and padlock.",
+    tagline: "The Holy Grail in Men's Leather",
+    description: "Shiny Vert Émeraude Porosus Crocodile leather with 18k gold-plated hardware.",
     image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop"],
     specs: { "Leather": "Shiny Porosus Crocodile", "Hardware": "18k Gold-Plated", "Origin": "Paris, France" }
@@ -452,11 +632,11 @@ export const LUXURY_PRODUCTS = [
     rating: 4.9,
     inStock: true,
     isFeatured: true,
-    tagline: "The Essential Luxury Travel Companion",
-    description: "Iconic duffle bag in Monogram Eclipse coated canvas with matte black hardware and calfskin trim.",
+    tagline: "Essential Luxury Travel Companion",
+    description: "Iconic duffle bag in Monogram Eclipse coated canvas with matte black hardware.",
     image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Monogram Eclipse Canvas & Cowhide", "Dimensions": "50cm x 29cm x 23cm", "Origin": "Paris, France" }
+    specs: { "Material": "Monogram Eclipse Canvas", "Dimensions": "50cm x 29cm", "Origin": "Paris, France" }
   },
   {
     id: "leather-03",
@@ -467,11 +647,11 @@ export const LUXURY_PRODUCTS = [
     rating: 4.9,
     inStock: true,
     isFeatured: false,
-    tagline: "Hand-Patinated Parisian Whole-Cut Shoes",
-    description: "Whole-cut Venezia leather shoe with signature tobacco patina hand-painted by master colorists.",
+    tagline: "Hand-Patinated Whole-Cut Shoes",
+    description: "Whole-cut Venezia leather shoe with signature tobacco patina hand-painted by colorists.",
     image: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Venezia Calf Leather", "Sole": "Goodyear Welted Leather", "Origin": "Paris, France" }
+    specs: { "Material": "Venezia Calf Leather", "Sole": "Goodyear Welted", "Origin": "Paris, France" }
   },
   {
     id: "leather-04",
@@ -482,11 +662,11 @@ export const LUXURY_PRODUCTS = [
     rating: 4.8,
     inStock: true,
     isFeatured: false,
-    tagline: "Iconic Red Sole Statement Footwear",
-    description: "Black velvet loafers covered in hand-set Swarovski crystals and signature red lacquer soles.",
+    tagline: "Red Sole Statement Footwear",
+    description: "Black velvet loafers covered in hand-set Swarovski crystals and red lacquer soles.",
     image: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1533867617858-e7b97e060509?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Velvet & Swarovski Strass", "Sole": "Signature Red Gloss Leather", "Origin": "Italy" }
+    specs: { "Material": "Velvet & Swarovski Strass", "Sole": "Signature Red Leather", "Origin": "Italy" }
   },
   {
     id: "leather-05",
@@ -512,11 +692,11 @@ export const LUXURY_PRODUCTS = [
     rating: 4.8,
     inStock: true,
     isFeatured: false,
-    tagline: "Bold Masculine Luxury Luggage",
+    tagline: "Masculine Heavy Luggage",
     description: "Heavy pebbled grain leather with chunky oversized gold zippers and padlock.",
     image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Pebbled Calfskin", "Hardware": "Signature Oversized Gold Metal", "Origin": "Italy" }
+    specs: { "Material": "Pebbled Calfskin", "Hardware": "Oversized Gold Metal", "Origin": "Italy" }
   },
   {
     id: "leather-07",
@@ -531,7 +711,7 @@ export const LUXURY_PRODUCTS = [
     description: "Genuine Nile crocodile leather with gold-toned Horsebit hardware.",
     image: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Genuine Nile Crocodile", "Hardware": "18k Gold-Plated Horsebit", "Origin": "Florence" }
+    specs: { "Material": "Genuine Nile Crocodile", "Hardware": "18k Gold-Plated", "Origin": "Florence" }
   },
   {
     id: "leather-08",
@@ -543,10 +723,10 @@ export const LUXURY_PRODUCTS = [
     inStock: true,
     isFeatured: false,
     tagline: "Hand-Painted Trunkmaker Heritage",
-    description: "Signature hand-stenciled Goyardine canvas with yellow chevron pattern and leather corners.",
+    description: "Signature hand-stenciled Goyardine canvas with yellow chevron pattern.",
     image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Goyardine Canvas & Chevroches Calfskin", "Origin": "Paris, France" }
+    specs: { "Material": "Goyardine Canvas & Calfskin", "Origin": "Paris, France" }
   },
   {
     id: "leather-09",
@@ -557,7 +737,7 @@ export const LUXURY_PRODUCTS = [
     rating: 4.7,
     inStock: true,
     isFeatured: false,
-    tagline: "Scratch-Resistant Executive Elegance",
+    tagline: "Scratch-Resistant Executive Case",
     description: "Structured briefcase in cross-hatch Saffiano leather with combination lock.",
     image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop"],
@@ -565,18 +745,18 @@ export const LUXURY_PRODUCTS = [
   },
   {
     id: "leather-10",
-    name: "Summer Walk Suede Loafers Water-Repellent",
+    name: "Summer Walk Suede Loafers",
     brand: "Loro Piana",
     category: "leather",
     price: 1150,
     rating: 4.9,
     inStock: true,
     isFeatured: false,
-    tagline: "The World's Softest Casual Footwear",
+    tagline: "Softest Casual Footwear",
     description: "Unlined calfskin suede treated with water-repellent finish and natural rubber soles.",
     image: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "Unlined Calfskin Suede", "Origin": "Northern Italy" }
+    specs: { "Material": "Calfskin Suede", "Origin": "Northern Italy" }
   },
   {
     id: "leather-11",
@@ -587,11 +767,11 @@ export const LUXURY_PRODUCTS = [
     rating: 4.8,
     inStock: true,
     isFeatured: false,
-    tagline: "German Industrial High Engineering",
+    tagline: "German High Engineering",
     description: "High-grade anodized aluminum with TSA combination locks and ball-bearing wheels.",
     image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Material": "High-Grade Anodized Aluminum", "Origin": "Germany" }
+    specs: { "Material": "Anodized Aluminum", "Origin": "Germany" }
   },
   {
     id: "leather-12",
@@ -609,7 +789,7 @@ export const LUXURY_PRODUCTS = [
     specs: { "Material": "Hand-Cut Alligator Skin", "Origin": "Florence, Italy" }
   },
 
-  // --- FINE JEWELRY & ACCESSORIES (MEN'S JEWELRY - 10 Items) ---
+  // --- FINE JEWELRY & ACCESSORIES (JEWELRY - 15 Items) ---
   {
     id: "jewel-01",
     name: "Panthère de Cartier Diamond & Emerald Necklace",
@@ -619,11 +799,11 @@ export const LUXURY_PRODUCTS = [
     rating: 5.0,
     inStock: true,
     isFeatured: true,
-    tagline: "The Symbol of High Jewelry Heritage",
+    tagline: "Symbol of High Jewelry Heritage",
     description: "18k White Gold set with 542 brilliant-cut diamonds, emerald eyes, and onyx spots.",
     image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Metal": "18k White Gold", "Diamonds": "542 Round Cut (8.65 cts)", "Gemstones": "Emerald Eyes, Onyx" }
+    specs: { "Metal": "18k White Gold", "Diamonds": "542 Round Cut (8.65 cts)", "Gemstones": "Emerald Eyes" }
   },
   {
     id: "jewel-02",
@@ -642,7 +822,7 @@ export const LUXURY_PRODUCTS = [
   },
   {
     id: "jewel-03",
-    name: "B.zero1 Rock 18k Yellow Gold & Black Ceramic Ring",
+    name: "B.zero1 Rock 18k Yellow Gold Ring",
     brand: "Bulgari",
     category: "jewelry",
     price: 3450,
@@ -664,7 +844,7 @@ export const LUXURY_PRODUCTS = [
     rating: 4.9,
     inStock: true,
     isFeatured: false,
-    tagline: "Gothic Rock-and-Roll Fine Jewelry",
+    tagline: "Gothic Rock Fine Jewelry",
     description: "Heavy 22k Yellow Gold carved cross pendant with diamond center stone.",
     image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"],
@@ -672,18 +852,18 @@ export const LUXURY_PRODUCTS = [
   },
   {
     id: "jewel-05",
-    name: "High Artistry Homage to Great Masters Fountain Pen",
+    name: "High Artistry Homage Fountain Pen",
     brand: "Montblanc",
     category: "jewelry",
     price: 45000,
     rating: 5.0,
     inStock: true,
     isFeatured: true,
-    tagline: "The Pinnacle of Fine Writing Instruments",
+    tagline: "Pinnacle of Fine Writing",
     description: "18k solid gold barrel set with baguette diamonds and 18k gold nib.",
     image: "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Nib": "18k Gold Hand-crafted", "Barrel": "18k Solid Gold & Baguette Diamonds" }
+    specs: { "Nib": "18k Gold Hand-crafted", "Barrel": "18k Gold & Baguette Diamonds" }
   },
   {
     id: "jewel-06",
@@ -694,11 +874,11 @@ export const LUXURY_PRODUCTS = [
     rating: 4.8,
     inStock: true,
     isFeatured: false,
-    tagline: "Sliding Diamond Modern Architecture",
+    tagline: "Sliding Diamond Architecture",
     description: "Brushed black DLC titanium bangle featuring three moving black diamonds.",
     image: "https://images.unsplash.com/photo-1611591475777-233ca732222e?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1611591475777-233ca732222e?q=80&w=1000&auto=format&fit=crop"],
-    specs: { "Metal": "Black DLC Titanium", "Diamonds": "3 Moving Black Diamonds" }
+    specs: { "Metal": "Black DLC Titanium", "Diamonds": "3 Moving Diamonds" }
   },
   {
     id: "jewel-07",
@@ -709,7 +889,7 @@ export const LUXURY_PRODUCTS = [
     rating: 5.0,
     inStock: true,
     isFeatured: false,
-    tagline: "The Legend of High Jewelry",
+    tagline: "Legend of High Jewelry",
     description: "Platinum bird mounted on a 35-carat cushion-cut yellow beryl crystal.",
     image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"],
@@ -724,7 +904,7 @@ export const LUXURY_PRODUCTS = [
     rating: 4.7,
     inStock: true,
     isFeatured: false,
-    tagline: "Place Vendôme Architectural Heritage",
+    tagline: "Place Vendôme Heritage",
     description: "Combines four graphic motifs in white gold and black PVD.",
     image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop"],
@@ -739,7 +919,7 @@ export const LUXURY_PRODUCTS = [
     rating: 4.9,
     inStock: true,
     isFeatured: false,
-    tagline: "The Emblem of Good Fortune",
+    tagline: "Emblem of Good Fortune",
     description: "Iconic clover silhouette in yellow gold with natural black onyx inlays.",
     image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"],
@@ -772,6 +952,14 @@ export const BRANDS = [
   "A. Lange & Söhne",
   "Omega",
   "Cartier",
+  "IWC",
+  "Hublot",
+  "Jaeger-LeCoultre",
+  "Panerai",
+  "Zenith",
+  "Breguet",
+  "Blancpain",
+  "Grand Seiko",
   "Tom Ford",
   "Louis Vuitton",
   "Brioni",
@@ -783,7 +971,7 @@ export const BRANDS = [
 ];
 
 export const CATEGORIES = [
-  { id: "all", name: "All 50+ Masterpieces" },
+  { id: "all", name: "All 75+ Masterpieces" },
   { id: "watches", name: "Haute Horlogerie" },
   { id: "clothing", name: "Haute Couture" },
   { id: "leather", name: "Rare Leather Goods" },
