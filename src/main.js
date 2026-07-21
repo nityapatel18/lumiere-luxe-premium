@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LUMIÈRE LUXE — Core Application & Interactive Controller
+   LUMIÈRE LUXE — Core Application & Interactive Controller (Bulletproof)
    ========================================================================== */
 
 import { LUXURY_PRODUCTS, BRANDS, CATEGORIES } from './data/products.js';
@@ -24,12 +24,24 @@ const state = {
   appliedPromo: null
 };
 
-// Initialize Application safely
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => renderApp());
-} else {
+// Guaranteed Initialization System
+function startApp() {
+  let app = document.getElementById('app');
+  if (!app) {
+    app = document.createElement('div');
+    app.id = 'app';
+    document.body.appendChild(app);
+  }
   renderApp();
 }
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startApp);
+} else {
+  startApp();
+}
+// Fallback trigger in case DOMContentLoaded already fired
+setTimeout(startApp, 200);
 
 function renderApp() {
   const app = document.getElementById('app');
@@ -112,7 +124,7 @@ function renderApp() {
     <section id="catalog" class="catalog-section container">
       <div class="section-title">
         <span class="section-subtitle">THE COLLECTION</span>
-        <h2 class="section-main-title">Masterpieces of Excellence</h2>
+        <h2 class="section-main-title">Masterpieces of Excellence (${LUXURY_PRODUCTS.length} Items)</h2>
       </div>
 
       <!-- Filters & Controls Bar -->
@@ -207,17 +219,16 @@ function getCartTotalCount() {
 }
 
 function attachDynamicEvents() {
-  // Search input
   const searchInput = document.getElementById('search-input');
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       state.searchQuery = e.target.value;
-      document.getElementById('product-grid-container').innerHTML = renderProductGrid();
+      const grid = document.getElementById('product-grid-container');
+      if (grid) grid.innerHTML = renderProductGrid();
       attachCardEvents();
     });
   }
 
-  // Category tabs
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       state.selectedCategory = e.target.dataset.category;
@@ -225,7 +236,6 @@ function attachDynamicEvents() {
     });
   });
 
-  // Brand dropdown
   const brandSelect = document.getElementById('brand-select');
   if (brandSelect) {
     brandSelect.addEventListener('change', (e) => {
@@ -234,18 +244,18 @@ function attachDynamicEvents() {
     });
   }
 
-  // Price range
   const priceRange = document.getElementById('price-range');
   if (priceRange) {
     priceRange.addEventListener('input', (e) => {
       state.maxPrice = parseInt(e.target.value);
-      document.getElementById('price-val').innerText = `$${state.maxPrice.toLocaleString()}`;
-      document.getElementById('product-grid-container').innerHTML = renderProductGrid();
+      const val = document.getElementById('price-val');
+      if (val) val.innerText = `$${state.maxPrice.toLocaleString()}`;
+      const grid = document.getElementById('product-grid-container');
+      if (grid) grid.innerHTML = renderProductGrid();
       attachCardEvents();
     });
   }
 
-  // Cart button
   const cartBtn = document.getElementById('cart-btn');
   if (cartBtn) {
     cartBtn.addEventListener('click', () => {
@@ -254,7 +264,6 @@ function attachDynamicEvents() {
     });
   }
 
-  // Concierge trigger
   document.querySelectorAll('.nav-concierge-trigger').forEach(btn => {
     btn.addEventListener('click', () => {
       state.isConciergeOpen = true;
@@ -262,7 +271,6 @@ function attachDynamicEvents() {
     });
   });
 
-  // Compare trigger
   const compareBtn = document.getElementById('compare-btn');
   if (compareBtn) {
     compareBtn.addEventListener('click', () => {
@@ -274,7 +282,6 @@ function attachDynamicEvents() {
 }
 
 function attachCardEvents() {
-  // Quick View
   document.querySelectorAll('.quick-view-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const id = e.target.dataset.id;
@@ -283,7 +290,6 @@ function attachCardEvents() {
     });
   });
 
-  // Add to cart
   document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const id = e.target.dataset.id;
@@ -291,7 +297,6 @@ function attachCardEvents() {
     });
   });
 
-  // Wishlist toggle
   document.querySelectorAll('.wishlist-toggle').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const id = e.target.dataset.id;
@@ -304,7 +309,6 @@ function attachCardEvents() {
     });
   });
 
-  // Compare toggle
   document.querySelectorAll('.compare-toggle-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const id = e.target.dataset.id;
@@ -335,7 +339,6 @@ function addToCart(productId) {
   renderCartDrawer();
 }
 
-// Product Modal & 360 AR View
 function renderProductModal(product) {
   const container = document.getElementById('modal-container');
   if (!container) return;
@@ -393,7 +396,6 @@ function renderProductModal(product) {
   });
 }
 
-// Shopping Bag Drawer
 function renderCartDrawer() {
   const container = document.getElementById('cart-drawer-container');
   if (!container || !state.isCartOpen) {
@@ -483,7 +485,6 @@ function renderCartDrawer() {
   }
 }
 
-// VIP Checkout Modal
 function renderCheckoutModal(total) {
   const container = document.getElementById('modal-container');
   if (!container) return;
@@ -533,7 +534,6 @@ function renderCheckoutModal(total) {
   });
 }
 
-// Compare Modal
 function renderCompareModal() {
   const container = document.getElementById('modal-container');
   if (!container) return;
@@ -569,7 +569,6 @@ function renderCompareModal() {
   document.getElementById('close-comp').addEventListener('click', () => container.innerHTML = '');
 }
 
-// Concierge AI Chat Drawer
 function renderConciergeChat() {
   const container = document.getElementById('concierge-chat-container');
   if (!container || !state.isConciergeOpen) {
