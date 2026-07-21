@@ -1,12 +1,12 @@
 /* ==========================================================================
-   LUMIÈRE LUXE — Core Application & Interactive Controller (Bulletproof)
+   NITYA LUXE — Core Application & Interactive Controller (Bulletproof)
    ========================================================================== */
 
 import { LUXURY_PRODUCTS, BRANDS, CATEGORIES } from './data/products.js';
 import confetti from 'canvas-confetti';
 
 // Reliable SVG Fallback Image generator for luxury items
-const SVG_FALLBACK = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23101116'/><circle cx='200' cy='200' r='120' fill='none' stroke='%23d4af37' stroke-width='2' stroke-dasharray='4,4'/><text x='50%25' y='48%25' dominant-baseline='middle' text-anchor='middle' fill='%23d4af37' font-family='serif' font-size='20' letter-spacing='4'>HAUTE HAUTEUR</text><text x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' fill='%23a0a5b5' font-family='sans-serif' font-size='12' letter-spacing='2'>MAISON LUMIÈRE</text></svg>";
+const SVG_FALLBACK = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23101116'/><circle cx='200' cy='200' r='120' fill='none' stroke='%23d4af37' stroke-width='2' stroke-dasharray='4,4'/><text x='50%25' y='48%25' dominant-baseline='middle' text-anchor='middle' fill='%23d4af37' font-family='serif' font-size='20' letter-spacing='4'>HAUTE HAUTEUR</text><text x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' fill='%23a0a5b5' font-family='sans-serif' font-size='12' letter-spacing='2'>MAISON NITYA</text></svg>";
 
 // State Management
 const state = {
@@ -40,7 +40,6 @@ if (document.readyState === 'loading') {
 } else {
   startApp();
 }
-// Fallback trigger in case DOMContentLoaded already fired
 setTimeout(startApp, 200);
 
 function renderApp() {
@@ -53,7 +52,7 @@ function renderApp() {
       <div class="container header-container">
         <div class="logo">
           <span class="logo-sub">MAISON DE HAUTE LUXE</span>
-          <h1 class="logo-main text-shimmer">LUMIÈRE & AURA</h1>
+          <h1 class="logo-main text-shimmer">NITYA & AURA</h1>
         </div>
 
         <nav class="nav-links">
@@ -87,7 +86,7 @@ function renderApp() {
       <div class="hero-bg-particles"></div>
       <div class="container hero-grid">
         <div class="hero-text-content">
-          <span class="badge-gold">EXCLUSIVITY REDEFINED</span>
+          <span class="badge-gold">EXCLUSIVITY REDEFINED BY NITYA</span>
           <h2 class="hero-title">Haute Horlogerie & Exceptional Couture</h2>
           <p class="hero-description">
             Discover a rare, curated realm of master watchmaking, haute couture, and fine jewelry reserved for true connoisseurs of luxury.
@@ -526,7 +525,7 @@ function renderCheckoutModal(total) {
     try {
       confetti({ particleCount: 150, spread: 100, origin: { y: 0.5 } });
     } catch(e) {}
-    alert('✨ CONGRATULATIONS! Your order has been placed with Maison Lumière Concierge. Your receipt is confirmed.');
+    alert('✨ CONGRATULATIONS! Your order has been placed with Maison Nitya Concierge. Your receipt is confirmed.');
     state.cart = [];
     state.isCartOpen = false;
     container.innerHTML = '';
@@ -586,7 +585,7 @@ function renderConciergeChat() {
 
         <div style="flex: 1; padding: 20px; overflow-y: auto;">
           <div style="background: rgba(212, 175, 55, 0.1); border: 1px solid var(--border-gold); padding: 14px; border-radius: 4px; font-size: 0.85rem; margin-bottom: 16px;">
-            💎 Welcome to Maison Lumière Private Stylist. How may I assist your acquisition today?
+            💎 Welcome to Maison Nitya Private Stylist. How may I assist your acquisition today?
           </div>
         </div>
 

@@ -1,11 +1,11 @@
-# 👑 LUMIÈRE LUXE — Maison de Haute Horlogerie & Couture
+# 👑 NITYA LUXE — Maison de Haute Horlogerie & Couture
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg)](LICENSE)
 [![Vite](https://img.shields.io/badge/Vite-6.2.0-646CFF.svg)](https://vitejs.dev/)
 [![Status](https://img.shields.io/badge/Build-Passing-emerald.svg)]()
-[![Edition](https://img.shields.io/badge/Edition-Haute_Horlogerie-d4af37.svg)]()
+[![Edition](https://img.shields.io/badge/Edition-NITYA_&_AURA-d4af37.svg)]()
 
-> **LUMIÈRE LUXE** is an ultra-luxurious, state-of-the-art e-commerce experience crafted for connoisseurs of high-end horlogerie, haute couture, fine jewelry, and rare leather goods. Showcasing world-renowned maisons including **Rolex, Patek Philippe, Audemars Piguet, Cartier, Louis Vuitton, Gucci, Hermès, and Balenciaga**.
+> **NITYA LUXE** (NITYA & AURA) is an ultra-luxurious, state-of-the-art e-commerce experience crafted for connoisseurs of high-end horlogerie, haute couture, fine jewelry, and rare leather goods. Showcasing world-renowned maisons including **Rolex, Patek Philippe, Audemars Piguet, Cartier, Louis Vuitton, Gucci, Hermès, and Balenciaga**.
 
 ---
 
@@ -53,23 +53,6 @@ Open `http://localhost:5173` in your browser to experience the platform.
 ### 4. Build for Production
 ```bash
 npm run build
-```
-
----
-
-## 📁 Directory Architecture
-
-```
-lumiere-luxe-premium/
-├── dist/                    # Compiled production bundle
-├── src/
-│   ├── data/
-│   │   └── products.js      # Curated luxury catalog dataset & specs
-│   ├── main.js              # Core application state & UI controller
-│   └── style.css            # Master luxury CSS design system & tokens
-├── index.html               # Main HTML entry point
-├── package.json             # Project dependencies & Vite scripts
-└── README.md                # Documentation
 ```
 
 ---

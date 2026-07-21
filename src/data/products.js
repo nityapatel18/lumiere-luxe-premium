@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LUMIÈRE LUXE — 75 Curated Luxury Men's Masterpieces Dataset
+   NITYA LUXE — 75 Curated Luxury Men's Masterpieces Dataset
    ========================================================================== */
 
 export const LUXURY_PRODUCTS = [
@@ -939,6 +939,81 @@ export const LUXURY_PRODUCTS = [
     image: "https://images.unsplash.com/photo-1611591475777-233ca732222e?q=80&w=1000&auto=format&fit=crop",
     gallery: ["https://images.unsplash.com/photo-1611591475777-233ca732222e?q=80&w=1000&auto=format&fit=crop"],
     specs: { "Metal": "18k Solid Yellow Gold", "Origin": "Geneva, Switzerland" }
+  },
+  {
+    id: "jewel-11",
+    name: "Ice Cube Rock 18k Rose Gold Diamond Ring",
+    brand: "Chopard",
+    category: "jewelry",
+    price: 3950,
+    rating: 4.8,
+    inStock: true,
+    isFeatured: false,
+    tagline: "Geometric Contemporary Luxury",
+    description: "Square facets in ethical 18k Rose Gold set with brilliant-cut diamonds.",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Metal": "Ethical 18k Rose Gold", "Origin": "Geneva" }
+  },
+  {
+    id: "jewel-12",
+    name: "Waves Cuff Bracelet 18k Gold & Black Diamonds",
+    brand: "David Yurman",
+    category: "jewelry",
+    price: 7800,
+    rating: 4.9,
+    inStock: true,
+    isFeatured: false,
+    tagline: "High Sculpture Cable Design",
+    description: "18k Yellow Gold cuff bracelet featuring carved wave motifs and black pavé diamonds.",
+    image: "https://images.unsplash.com/photo-1611591475777-233ca732222e?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1611591475777-233ca732222e?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Metal": "18k Gold & Black Diamonds", "Origin": "New York, USA" }
+  },
+  {
+    id: "jewel-13",
+    name: "Black South Sea Cultured Pearl Cufflinks",
+    brand: "Mikimoto",
+    category: "jewelry",
+    price: 6400,
+    rating: 4.9,
+    inStock: true,
+    isFeatured: false,
+    tagline: "The King of Pearls",
+    description: "Pair of 11mm peacock black South Sea pearls set in 18k white gold and diamonds.",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Pearl": "11mm Black South Sea", "Metal": "18k White Gold", "Origin": "Tokyo, Japan" }
+  },
+  {
+    id: "jewel-14",
+    name: "Couture Black Sapphire & Titanium Ring",
+    brand: "Stephen Webster",
+    category: "jewelry",
+    price: 5800,
+    rating: 4.8,
+    inStock: true,
+    isFeatured: false,
+    tagline: "Edgy British High Fine Jewelry",
+    description: "Forged black titanium band set with 4.5 carats of emerald-cut black sapphires.",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Metal": "Titanium", "Gemstones": "4.5ct Black Sapphires", "Origin": "London, UK" }
+  },
+  {
+    id: "jewel-15",
+    name: "Ligne 2 Gold Diamond-Head Lighter",
+    brand: "S.T. Dupont",
+    category: "jewelry",
+    price: 2400,
+    rating: 4.9,
+    inStock: true,
+    isFeatured: false,
+    tagline: "The Legendary Cling Sound",
+    description: "Yellow gold guilloché diamond-head pattern with crystal clear opening ring sound.",
+    image: "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?q=80&w=1000&auto=format&fit=crop",
+    gallery: ["https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?q=80&w=1000&auto=format&fit=crop"],
+    specs: { "Finish": "Yellow Gold Guilloché", "Origin": "Paris, France" }
   }
 ];
 
