@@ -5,6 +5,9 @@
 import { LUXURY_PRODUCTS, BRANDS, CATEGORIES } from './data/products.js';
 import confetti from 'canvas-confetti';
 
+// Reliable SVG Fallback Image generator for luxury items
+const SVG_FALLBACK = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%23101116'/><circle cx='200' cy='200' r='120' fill='none' stroke='%23d4af37' stroke-width='2' stroke-dasharray='4,4'/><text x='50%25' y='48%25' dominant-baseline='middle' text-anchor='middle' fill='%23d4af37' font-family='serif' font-size='20' letter-spacing='4'>HAUTE HAUTEUR</text><text x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' fill='%23a0a5b5' font-family='sans-serif' font-size='12' letter-spacing='2'>MAISON LUMIÈRE</text></svg>";
+
 // State Management
 const state = {
   cart: [],
@@ -18,18 +21,20 @@ const state = {
   isCartOpen: false,
   isCompareOpen: false,
   isConciergeOpen: false,
-  appliedPromo: null,
-  active360Angle: 0
+  appliedPromo: null
 };
 
-// Initialize Application
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize Application safely
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => renderApp());
+} else {
   renderApp();
-  initEventListeners();
-});
+}
 
 function renderApp() {
   const app = document.getElementById('app');
+  if (!app) return;
+
   app.innerHTML = `
     <!-- Glassmorphic Navigation Header -->
     <header class="header">
@@ -47,10 +52,6 @@ function renderApp() {
         </nav>
 
         <div class="header-actions">
-          <button id="search-btn" class="icon-btn" title="Search Catalog">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </button>
-          
           <button id="compare-btn" class="icon-btn" title="Compare Items">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="8" height="18" rx="1"/><rect x="14" y="3" width="8" height="18" rx="1"/></svg>
             ${state.compare.length ? `<span class="badge-count">${state.compare.length}</span>` : ''}
@@ -85,10 +86,10 @@ function renderApp() {
           </div>
         </div>
 
-        <div class="hero-spotlight-card glass-card">
+        <div class="hero-spotlight-card glass-card" id="spotlight">
           <div class="spotlight-tag">CURATOR'S CHOICE</div>
           <div class="spotlight-img-container">
-            <img src="${LUXURY_PRODUCTS[0].image}" alt="Spotlight Piece" class="spotlight-img floating-element" />
+            <img src="${LUXURY_PRODUCTS[0].image}" alt="Spotlight Piece" class="spotlight-img floating-element" onerror="this.onerror=null; this.src='${SVG_FALLBACK}';" />
           </div>
           <div class="spotlight-info">
             <span class="spotlight-brand">${LUXURY_PRODUCTS[0].brand}</span>
@@ -125,6 +126,8 @@ function renderApp() {
         </div>
 
         <div class="filter-dropdowns">
+          <input type="text" id="search-input" placeholder="Search brands, pieces..." value="${state.searchQuery}" style="background: #101116; border: 1px solid var(--border-gold); color: #fff; padding: 10px 14px; font-family: var(--font-heading); font-size: 0.75rem; border-radius: 2px;" />
+
           <select id="brand-select" class="custom-select">
             ${BRANDS.map(b => `<option value="${b}" ${state.selectedBrand === b ? 'selected' : ''}>${b}</option>`).join('')}
           </select>
@@ -174,7 +177,7 @@ function renderProductGrid() {
   return filtered.map(p => `
     <div class="glass-card product-card">
       <div class="card-image-wrap">
-        <img src="${p.image}" alt="${p.name}" class="card-img" />
+        <img src="${p.image}" alt="${p.name}" class="card-img" onerror="this.onerror=null; this.src='${SVG_FALLBACK}';" />
         <span class="badge-gold category-badge">${p.category.toUpperCase()}</span>
         <button class="wishlist-toggle ${state.wishlist.includes(p.id) ? 'active' : ''}" data-id="${p.id}" title="Add to Wishlist">
           ♥
@@ -204,6 +207,16 @@ function getCartTotalCount() {
 }
 
 function attachDynamicEvents() {
+  // Search input
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      state.searchQuery = e.target.value;
+      document.getElementById('product-grid-container').innerHTML = renderProductGrid();
+      attachCardEvents();
+    });
+  }
+
   // Category tabs
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -312,9 +325,11 @@ function addToCart(productId) {
     existing.qty += 1;
   } else {
     const p = LUXURY_PRODUCTS.find(item => item.id === productId);
-    state.cart.push({ ...p, qty: 1 });
+    if (p) state.cart.push({ ...p, qty: 1 });
   }
-  confetti({ particleCount: 40, spread: 60, origin: { y: 0.8 } });
+  try {
+    confetti({ particleCount: 40, spread: 60, origin: { y: 0.8 } });
+  } catch (e) {}
   renderApp();
   state.isCartOpen = true;
   renderCartDrawer();
@@ -323,6 +338,8 @@ function addToCart(productId) {
 // Product Modal & 360 AR View
 function renderProductModal(product) {
   const container = document.getElementById('modal-container');
+  if (!container) return;
+
   container.innerHTML = `
     <div class="modal-overlay active" id="p-modal">
       <div class="modal-content glass-card p-modal-inner">
@@ -331,11 +348,11 @@ function renderProductModal(product) {
         <div class="modal-grid">
           <div class="modal-gallery">
             <div class="ar-view-box">
-              <img src="${product.image}" id="main-modal-img" class="modal-main-img" />
+              <img src="${product.image}" id="main-modal-img" class="modal-main-img" onerror="this.onerror=null; this.src='${SVG_FALLBACK}';" />
               <div class="ar-badge">360° SIMULATOR ACTIVE</div>
             </div>
             <div class="gallery-thumbs">
-              ${product.gallery.map(g => `<img src="${g}" class="thumb-img" onclick="document.getElementById('main-modal-img').src='${g}'" />`).join('')}
+              ${product.gallery.map(g => `<img src="${g}" class="thumb-img" onerror="this.onerror=null; this.src='${SVG_FALLBACK}';" onclick="document.getElementById('main-modal-img').src='${g}'" />`).join('')}
             </div>
           </div>
 
@@ -379,8 +396,8 @@ function renderProductModal(product) {
 // Shopping Bag Drawer
 function renderCartDrawer() {
   const container = document.getElementById('cart-drawer-container');
-  if (!state.isCartOpen) {
-    container.innerHTML = '';
+  if (!container || !state.isCartOpen) {
+    if (container) container.innerHTML = '';
     return;
   }
 
@@ -401,7 +418,7 @@ function renderCartDrawer() {
             <div style="text-align: center; padding: 40px; color: var(--text-muted);">Your luxury bag is currently empty.</div>
           ` : state.cart.map(item => `
             <div class="cart-item-row">
-              <img src="${item.image}" class="cart-item-img" />
+              <img src="${item.image}" class="cart-item-img" onerror="this.onerror=null; this.src='${SVG_FALLBACK}';" />
               <div class="cart-item-info">
                 <span class="badge-gold" style="font-size:0.6rem;">${item.brand}</span>
                 <h4 style="font-size: 0.9rem; margin: 4px 0;">${item.name}</h4>
@@ -469,6 +486,8 @@ function renderCartDrawer() {
 // VIP Checkout Modal
 function renderCheckoutModal(total) {
   const container = document.getElementById('modal-container');
+  if (!container) return;
+
   container.innerHTML = `
     <div class="modal-overlay active">
       <div class="modal-content glass-card" style="max-width: 600px; padding: 32px;">
@@ -503,7 +522,9 @@ function renderCheckoutModal(total) {
 
   document.getElementById('checkout-form').addEventListener('submit', (e) => {
     e.preventDefault();
-    confetti({ particleCount: 150, spread: 100, origin: { y: 0.5 } });
+    try {
+      confetti({ particleCount: 150, spread: 100, origin: { y: 0.5 } });
+    } catch(e) {}
     alert('✨ CONGRATULATIONS! Your order has been placed with Maison Lumière Concierge. Your receipt is confirmed.');
     state.cart = [];
     state.isCartOpen = false;
@@ -515,6 +536,8 @@ function renderCheckoutModal(total) {
 // Compare Modal
 function renderCompareModal() {
   const container = document.getElementById('modal-container');
+  if (!container) return;
+
   const items = state.compare.map(id => LUXURY_PRODUCTS.find(p => p.id === id)).filter(Boolean);
 
   container.innerHTML = `
@@ -529,7 +552,7 @@ function renderCompareModal() {
           <div style="display: grid; grid-template-columns: repeat(${items.length}, 1fr); gap: 24px;">
             ${items.map(p => `
               <div class="glass-card" style="padding: 20px; text-align: center;">
-                <img src="${p.image}" style="height: 180px; object-fit: contain; margin-bottom: 12px;" />
+                <img src="${p.image}" style="height: 180px; object-fit: contain; margin-bottom: 12px;" onerror="this.onerror=null; this.src='${SVG_FALLBACK}';" />
                 <h3 class="font-heading">${p.name}</h3>
                 <div style="color: var(--gold-primary); font-weight: 700; margin: 8px 0;">$${p.price.toLocaleString()} USD</div>
                 <div style="text-align: left; margin-top: 16px; font-size: 0.85rem;">
@@ -549,8 +572,8 @@ function renderCompareModal() {
 // Concierge AI Chat Drawer
 function renderConciergeChat() {
   const container = document.getElementById('concierge-chat-container');
-  if (!state.isConciergeOpen) {
-    container.innerHTML = '';
+  if (!container || !state.isConciergeOpen) {
+    if (container) container.innerHTML = '';
     return;
   }
 
